@@ -135,3 +135,27 @@ The idea is to use your Linux device as a client that can communicate with your 
 
     - At this point we have a working visual-prompt, but if we want to see the commands that we say and the responses from the assistant in command-log widget, then we need a little more flexibility in our setup. This can be done using an Event-Handler
 
+## Stage 3 : Setup an Event-Handler
+
+![Stage 3](resources/stage-3.jpg)
+
+
+## Stage 4 : Configure Custom Sentences and Actions
+
+![Stage 4](resources/stage-4.jpg)
+
+
+## Stage 5 : Setup an Action Handler
+
+![Stage 5](resources/stage-5.jpg)
+
+
+## Stage 6 : Setup a Window Manager
+
+![Stage 6](resources/stage-6.jpg)
+
+
+## Stage 7 : Setup Additional Widgets
+
+![Stage 7](resources/stage-7.jpg)
+
