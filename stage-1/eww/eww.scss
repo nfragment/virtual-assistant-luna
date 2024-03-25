@@ -1,0 +1,66 @@
+/** xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Author: nfragment
+Website: https://nfragment.com
+File Description: All the styling of widgets must be defined here.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx **/
+
+*{
+	all: unset;
+	font-family: "Bebas Neue Bold";
+	font-family: "iosevka nerd font";
+	font-family: "antonio";
+}
+
+// :root {
+//   --bgColor: #050f13
+// }
+
+
+.pri_bg_clr {
+  background-color: #050f13;
+}
+
+.pri_fg_clr {
+    color: #b55315;
+}
+
+.sec_fg_clr {
+    color: #2a5a71;
+}
+
+.ter_fg_clr {
+    color: #9bb5c1;
+}
+
+.bg_frame {
+  background-color: #050f13;
+  border: 1px solid #2a5a71;
+}
+
+.sec_button {
+  font-size: 16;
+  background-color: #10262f;
+  color: #9bb5c1;
+  font-family: "bebas neue bold";
+  // margin: 0px 4px 1px 4px;
+  // padding: 0.4em 0 0.4em 0;
+  // border-radius: 14px;
+  // border: 1px solid #2a5a71;
+}
+
+.ter_button {
+  font-size: 16;
+  background-color: #2a5a71;
+  color: #fff;
+  font-family: "bebas neue bold";
+}
+
+.log {
+  font-size: 12;
+  margin: 0px 0px 0px 0px;
+  color: #9bb5c1;
+  font-family: "iosevka nerd font";
+}
+

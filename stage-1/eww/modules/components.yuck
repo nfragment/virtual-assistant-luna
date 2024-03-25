@@ -1,0 +1,35 @@
+; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+; Author : nfragment
+; Website : https://nfragment.com
+; Module Name : components
+; Module Description : Any reusable components / widgets that we use 
+; in EWW must be defined here
+
+; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+(defwidget spacer [height width]
+    (button :width width :height height :class "spacer")
+)
+
+(defwidget test-widget []
+        (box :orientation "horizontal" :spacing 10 :valign "center"
+            (label :class "frame_button" :height 60 :width 800 :wrap true :text "This is an EWW Widget")
+        )
+)
+
+
+; ====================================================================
+;                           WINDOWS
+; ====================================================================
+
+(defwindow test-window
+          :monitor "0"
+          :geometry (geometry :x "0"
+                       :y "0"
+                       :anchor "top center")
+          :stacking "bg"
+          :windowtype "dock"
+          :wm-ignore true
+  (test-widget)
+)

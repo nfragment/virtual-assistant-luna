@@ -1,0 +1,22 @@
+; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+; Author : nfragment
+; Website : https://nfragment.com
+; File Description : All the modules that we want to enable and 
+; use in EWW must be defined / included here
+
+; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+; ---------------------------- VARIABLES -----------------------------
+
+(include "modules/variables.yuck")
+
+; ----------------------------- WIDGETS ------------------------------
+
+(include "modules/components.yuck")
+
+(include "modules/event-log.yuck")
+
+(include "modules/command-log.yuck")
+
+(include "modules/voice-command.yuck")

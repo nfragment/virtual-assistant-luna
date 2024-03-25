@@ -1,0 +1,24 @@
+; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+; Author : nfragment
+; Website : https://nfragment.com
+; Module Name : variables
+; Module Description : Any variables that we use in EWW must be defined here
+
+; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+(defvar test_var "nfragment")
+
+; ----------------------------VOICE COMMAND VARIABLES -----------------------------
+
+(defvar voice_command_mode false)
+(defvar assistant_status "ready")
+(defvar formatted_command_log
+  "(box :orientation 'vertical' :space-evenly false :spacing 10 :width 100 :height 400 :halign 'center' :valign 'start' (label :halign 'center' :width 360 :limit-width 230 :wrap true :show_truncated true :style 'color:#5f8391' :text 'This widget shows a constant feed of all the commands issued by the User and the response from the Assistant') (label :halign 'start' :width 360 :text 'It is automatically updated when any new command is issued') (label :halign 'center' :style 'color:#5f8391' :width 360 :text 'All commands from the users is shown in this color') (label :halign 'start' :style 'color:#e1ebf0' :width 360 :text 'All responses from the virtual assistant is shown in this color') (label :hexpand false :halign 'center' :width 360 :limit-width 140 :wrap true :show_truncated true :style 'color:#5f8391' :text 'Enjoy!'))")
+
+; ----------------------------EVENT LOG VARIABLES -----------------------------
+
+(defvar events "[1, 2, 3]")
+
+; --------------------------------------------------------------------
+

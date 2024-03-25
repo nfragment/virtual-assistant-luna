@@ -1,0 +1,64 @@
+; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+; Author : nfragment
+; Website : https://nfragment.com
+; Module Name : voice-command
+; Module Description : All widgets and panels related to voice command
+
+; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+(defwidget voice-command-prompt []
+  (overlay
+    (box
+      (image :path "images/assistant-${assistant_status}.gif" :image-width 20 :image-height 20 :valign "center" :halign "center")
+    ) 
+    (button :onclick 'notify-send "voice command prompt"' :onrightclick "eww close voice-command-panel")
+  )
+)
+
+(defwidget voice-command-panel []
+  (overlay
+    (box :class "pri_bg_frame" :space-evenly "false" :spacing 50 :orientation "horizontal"
+
+        (spacer :height 10 :width 10)
+    
+        (box :space-evenly "false" :spacing 20 :orientation "vertical"
+          (spacer :height 200 :width 10)
+          (command-log)
+          (spacer :height 200 :width 10)
+        )
+
+        (spacer :height 10 :width 50)
+
+        (box :space-evenly "false" :spacing 25 :orientation "vertical"
+          (spacer :height 200 :width 10)
+          (voice-command-prompt)
+          (spacer :height 184 :width 10)
+        )
+
+        (spacer :height 10 :width 40)
+
+        (box :space-evenly "false" :spacing 20 :orientation "vertical"
+          (spacer :height 200 :width 10)
+          (event-log)
+          (spacer :height 200 :width 10)
+        )
+
+        (spacer :height 10 :width 10)
+    )
+  )
+)
+
+; ====================================================================
+;                           WINDOWS
+; ====================================================================
+
+(defwindow voice-command-panel
+          :geometry (geometry :x "100"
+                       :y "60"
+                       :anchor "top left")
+          :stacking "fg"
+          :windowtype "dock"
+          :wm-ignore true
+  (voice-command-panel))
+

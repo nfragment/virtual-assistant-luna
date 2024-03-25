@@ -1,0 +1,48 @@
+; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+; Author : nfragment
+; Website : https://nfragment.com
+; Module Name : event-log
+; Module Description : Shows a list of recent events that have occurred
+; in our smart home
+
+; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+(defwidget list-of-events []
+    (box :space-evenly "false" :spacing 10 :orientation "vertical"
+        (for event in events
+            (label :text event :class "log ter_fg_clr" :height 20)
+        )
+    )
+)
+
+(defwidget event-log []
+    (overlay
+        (box :space-evenly "false" :spacing 10 :orientation "vertical"
+            (box :space-evenly "false" :spacing 5 :orientation "horizontal"
+                (button :width 20 :height 20 :class "ter_button" "06")
+                (button :width 120 :height 20 :class "sec_button" "EVENT LOG")
+            )
+                (button :width 400 :height 2 :class "sec_button")
+            (scroll :vscroll true :class "bg" :height 360 :width 300
+                    (list-of-events)
+            )
+        )
+    )
+)
+
+; ====================================================================
+;                           WINDOWS
+; ====================================================================
+
+(defwindow event-log
+          :monitor "0"
+          :geometry (geometry :x "-10px"
+                       :y "53%"
+                       :anchor "top right")
+          :stacking "bg"
+          :windowtype "dock"
+          :wm-ignore true
+  (event-log)
+)
+
